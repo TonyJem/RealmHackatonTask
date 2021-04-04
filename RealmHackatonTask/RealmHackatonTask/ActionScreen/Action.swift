@@ -1,10 +1,6 @@
 import Foundation
 
-enum TransactionType {
-    case cashWithdrawal
-    case topUpDeposit
-    case topUpPhoneAccount
-}
+
 
 struct Action {
     let transactionType: TransactionType

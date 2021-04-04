@@ -12,15 +12,15 @@ class HomeViewController: UIViewController {
     
     //MARK: -IBActions:
     @IBAction func cashWithdrawalButtonDidTap(_ sender: UIButton) {
-        proceedToActionView()
+        proceedToActionView(sender: sender)
     }
     
     @IBAction func topUpDepositButtonDidTap(_ sender: UIButton) {
-        proceedToActionView()
+        proceedToActionView(sender: sender)
     }
     
     @IBAction func topUpPhoneAccountButtonDidTap(_ sender: UIButton) {
-        proceedToActionView()
+        proceedToActionView(sender: sender)
     }
     
     // MARK: - Navigation
@@ -35,9 +35,22 @@ class HomeViewController: UIViewController {
 
 //MARK: -Helpers:
 private extension HomeViewController {
-    func proceedToActionView() {
+    func proceedToActionView(sender: UIButton) {
         let actionStoryboard = UIStoryboard(name: "ActionScreen", bundle: nil)
         let destinationVC = actionStoryboard.instantiateViewController(identifier: "ActionViewController")
+        
+        guard let buttonTitle = sender.currentTitle else { return }
+        switch buttonTitle {
+        case "Cash Withdrawal":
+            destinationVC.title = "Cash Withdrawal"
+        case "Top Up Deposit":
+            destinationVC.title = "Top Up Deposit"
+        case "Top Up Phone Account":
+            destinationVC.title = "Top Up Phone Account"
+        default:
+            break
+        }
+        
         show(destinationVC, sender: nil)
     }
 }
