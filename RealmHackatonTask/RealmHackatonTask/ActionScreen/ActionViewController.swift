@@ -35,12 +35,12 @@ class ActionViewController: UIViewController {
     }
     
     @IBAction func decreaseByOneButtonDidTap(_ sender: Any) {
-        model.reduceAccaount(by: 1)
+        model.reduceBalance(by: 1)
         updateLabel()
     }
     
     @IBAction func increaseByOneButtonDidTap(_ sender: UIButton) {
-        model.increaseAccount(by: 1)
+        model.increaseBalance(by: 1)
         updateLabel()
     }
     
