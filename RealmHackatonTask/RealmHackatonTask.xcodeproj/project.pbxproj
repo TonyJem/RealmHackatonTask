@@ -18,6 +18,7 @@
 		3A9A2CFD2619F61600C8E052 /* ActionScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9A2CFC2619F61600C8E052 /* ActionScreen.storyboard */; };
 		3A9A2D05261A0AEC00C8E052 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D04261A0AEC00C8E052 /* ActionViewController.swift */; };
 		3A9A2D0A261A129300C8E052 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D09261A129300C8E052 /* BalanceViewController.swift */; };
+		3A9A2D1E261A398700C8E052 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D1D261A398700C8E052 /* Action.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3A9A2CFC2619F61600C8E052 /* ActionScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActionScreen.storyboard; sourceTree = "<group>"; };
 		3A9A2D04261A0AEC00C8E052 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		3A9A2D09261A129300C8E052 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
+		3A9A2D1D261A398700C8E052 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		3A9A2D0E261A137100C8E052 /* ActionScreen */ = {
 			isa = PBXGroup;
 			children = (
+				3A9A2D1D261A398700C8E052 /* Action.swift */,
 				3A9A2D04261A0AEC00C8E052 /* ActionViewController.swift */,
 				3A9A2CFC2619F61600C8E052 /* ActionScreen.storyboard */,
 			);
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A9A2CE62619ACBF00C8E052 /* HomeViewController.swift in Sources */,
+				3A9A2D1E261A398700C8E052 /* Action.swift in Sources */,
 				3A9A2CE22619ACBF00C8E052 /* AppDelegate.swift in Sources */,
 				3A9A2D0A261A129300C8E052 /* BalanceViewController.swift in Sources */,
 				3A9A2D05261A0AEC00C8E052 /* ActionViewController.swift in Sources */,
