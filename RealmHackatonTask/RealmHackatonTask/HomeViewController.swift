@@ -2,6 +2,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    var currentBalance = 888
+    
     private var actionViewController: UIViewController {
         actionStoryboard.instantiateViewController(identifier: "ActionViewController")
     }
