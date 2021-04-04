@@ -1,24 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RealmHackatonTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7R-yP-s7Q">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="krX-zb-r6A">
+                                        <rect key="frame" x="57" y="288" width="300" height="320"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsj-r6-aap">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="bMb-qV-0Ym"/>
+                                                </constraints>
+                                                <state key="normal" title="Show Balance"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqt-Bz-LT8">
+                                                <rect key="frame" x="0.0" y="70" width="300" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="yHt-d5-UID"/>
+                                                </constraints>
+                                                <state key="normal" title="Show Transactions"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObP-rN-A41">
+                                                <rect key="frame" x="0.0" y="140" width="300" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="kNf-ew-bYM"/>
+                                                </constraints>
+                                                <state key="normal" title="Cash Withdrawal"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xm5-Lf-SJp">
+                                                <rect key="frame" x="0.0" y="210" width="300" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="nYe-Ss-x0m"/>
+                                                </constraints>
+                                                <state key="normal" title="Top Up Deposit"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypO-33-C6v">
+                                                <rect key="frame" x="0.0" y="280" width="300" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Dx0-Xb-d43"/>
+                                                </constraints>
+                                                <state key="normal" title="Top Up Phone Account"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Kqt-Bz-LT8" firstAttribute="leading" secondItem="krX-zb-r6A" secondAttribute="leading" id="2g1-hn-mta"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xm5-Lf-SJp" secondAttribute="trailing" id="I77-5u-g5b"/>
+                                            <constraint firstAttribute="width" constant="300" id="IeM-rf-feW"/>
+                                            <constraint firstAttribute="trailing" secondItem="ObP-rN-A41" secondAttribute="trailing" id="PaY-VQ-FrC"/>
+                                            <constraint firstItem="ypO-33-C6v" firstAttribute="leading" secondItem="krX-zb-r6A" secondAttribute="leading" id="TiV-e9-Na1"/>
+                                            <constraint firstAttribute="trailing" secondItem="ypO-33-C6v" secondAttribute="trailing" id="alT-fM-bSJ"/>
+                                            <constraint firstItem="gsj-r6-aap" firstAttribute="top" secondItem="krX-zb-r6A" secondAttribute="top" id="bCE-mN-DI5"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kqt-Bz-LT8" secondAttribute="trailing" id="gFt-Uo-P2S"/>
+                                            <constraint firstAttribute="trailing" secondItem="gsj-r6-aap" secondAttribute="trailing" id="gn3-MP-VT3"/>
+                                            <constraint firstItem="ObP-rN-A41" firstAttribute="leading" secondItem="krX-zb-r6A" secondAttribute="leading" id="jyd-WL-SSk"/>
+                                            <constraint firstItem="Xm5-Lf-SJp" firstAttribute="leading" secondItem="krX-zb-r6A" secondAttribute="leading" id="mdB-bS-ayz"/>
+                                            <constraint firstItem="gsj-r6-aap" firstAttribute="leading" secondItem="krX-zb-r6A" secondAttribute="leading" id="pTa-0Z-W3B"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="krX-zb-r6A" firstAttribute="centerX" secondItem="I7R-yP-s7Q" secondAttribute="centerX" id="COs-rA-sqg"/>
+                                    <constraint firstItem="krX-zb-r6A" firstAttribute="centerY" secondItem="I7R-yP-s7Q" secondAttribute="centerY" id="KmD-JH-D2r"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="I7R-yP-s7Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GiO-yX-OP4"/>
+                            <constraint firstItem="I7R-yP-s7Q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Paf-va-tK2"/>
+                            <constraint firstAttribute="bottom" secondItem="I7R-yP-s7Q" secondAttribute="bottom" id="cuR-yP-Vfj"/>
+                            <constraint firstItem="I7R-yP-s7Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lHH-l9-Fkh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-181.15942028985509" y="132.58928571428572"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
