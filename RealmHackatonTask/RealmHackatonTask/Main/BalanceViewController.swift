@@ -1,9 +1,9 @@
 import UIKit
 
 class BalanceViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet private weak var balanceButton: UIButton!
+    
+    @IBAction func balanceButtonDidTap(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
-
 }

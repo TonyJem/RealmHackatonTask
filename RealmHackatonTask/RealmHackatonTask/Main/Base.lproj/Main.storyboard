@@ -142,7 +142,7 @@
         <!--Balance-->
         <scene sceneID="8na-wY-0Z7">
             <objects>
-                <viewController id="P1Y-zW-uZI" sceneMemberID="viewController">
+                <viewController id="P1Y-zW-uZI" customClass="BalanceViewController" customModule="RealmHackatonTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dg6-pn-GcM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,6 +169,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="$900000.00"/>
+                                                <connections>
+                                                    <action selector="balanceButtonDidTap:" destination="P1Y-zW-uZI" eventType="touchUpInside" id="RqG-nN-9jc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -196,6 +199,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Balance" id="sMj-CM-8NI"/>
+                    <connections>
+                        <outlet property="balanceButton" destination="YPb-uK-hCc" id="XAu-nZ-GiK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nL-lv-Ez3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
