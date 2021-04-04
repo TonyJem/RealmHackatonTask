@@ -2,8 +2,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-//    TODO: currentBalance is not used yet
-    var currentBalance = 888
+    //TODO: Currently is set as Constant, need to Replace with value comming from DB:
+    let currentBalance = 888
     
     private var actionViewController: UIViewController {
         actionStoryboard.instantiateViewController(identifier: "ActionViewController")
@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
         UIStoryboard(name: "ActionScreen", bundle: nil)
     }()
     
+    //TODO: Currently not used:
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,6 +30,15 @@ class HomeViewController: UIViewController {
     @IBAction func topUpPhoneAccountButtonDidTap(_ sender: UIButton) {
         proceedToActionView()
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showBalance" {
+            if let destinationVC = segue.destination as? BalanceViewController {
+                destinationVC.balanceToDisplay = currentBalance
+            }
+        }
+    }
 }
 
 //MARK: -Helpers:
@@ -37,13 +47,3 @@ private extension HomeViewController {
         self.show(actionViewController, sender: nil)
     }
 }
-
-/* TODO:
-// MARK: - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    // Get the new view controller using segue.destination.
-    // Pass the selected object to the new view controller.
-}
-*/

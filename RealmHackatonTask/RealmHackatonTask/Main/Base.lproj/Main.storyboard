@@ -29,7 +29,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Show Balance"/>
                                                 <connections>
-                                                    <segue destination="P1Y-zW-uZI" kind="show" id="8nP-cb-SUe"/>
+                                                    <segue destination="P1Y-zW-uZI" kind="show" identifier="showBalance" id="8nP-cb-SUe"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqt-Bz-LT8">
