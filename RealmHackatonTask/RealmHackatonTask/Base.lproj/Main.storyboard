@@ -59,6 +59,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="Dx0-Xb-d43"/>
                                                 </constraints>
                                                 <state key="normal" title="Top Up Phone Account"/>
+                                                <connections>
+                                                    <segue destination="TuL-oB-KkC" kind="show" id="WlR-Zl-LTW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -99,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="728.98550724637687" y="132.58928571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--All Transactions-->
         <scene sceneID="b0N-OH-3Zj">
             <objects>
                 <viewController id="TuL-oB-KkC" sceneMemberID="viewController">
@@ -121,12 +124,13 @@
                             <constraint firstItem="8g5-pt-pDt" firstAttribute="leading" secondItem="M0d-30-tMm" secondAttribute="leading" id="dVq-gk-AEh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="All Transactions" id="7af-Ie-GRL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yc7-aN-oUp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640.5797101449277" y="414.50892857142856"/>
+            <point key="canvasLocation" x="1642" y="531"/>
         </scene>
-        <!--View Controller-->
+        <!--Balance-->
         <scene sceneID="8na-wY-0Z7">
             <objects>
                 <viewController id="P1Y-zW-uZI" sceneMemberID="viewController">
@@ -182,11 +186,11 @@
                             <constraint firstAttribute="bottom" secondItem="tCJ-C7-q15" secondAttribute="bottom" id="pB5-kQ-vjj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sMj-CM-8NI"/>
+                    <navigationItem key="navigationItem" title="Balance" id="sMj-CM-8NI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nL-lv-Ez3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642.0289855072465" y="-272.54464285714283"/>
+            <point key="canvasLocation" x="1641" y="-186"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bQS-Zh-9DF">
