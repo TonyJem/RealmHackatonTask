@@ -1,11 +1,8 @@
 import Foundation
 
-
-
 struct Action {
     let transactionType: TransactionType
 }
-
 
 class Transaction {
     let action: Action

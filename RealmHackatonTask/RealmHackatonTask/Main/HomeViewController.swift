@@ -8,7 +8,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var topUpPhoneButton: UIButton!
     
     //TODO: Currently is set as Constant, need to Replace with value comming from DB:
-    let currentBalance = 888
+    private let currentBalance = 888
     
     override func viewDidLoad() {
         super.viewDidLoad()

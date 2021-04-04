@@ -8,7 +8,7 @@ enum TransactionType {
 
 class ActionViewController: UIViewController {
  
-    var type: TransactionType? {
+    private var type: TransactionType? {
         switch self.title {
         case __("cash_withdrawal_bar_title"):
             return .cashWithdrawal
