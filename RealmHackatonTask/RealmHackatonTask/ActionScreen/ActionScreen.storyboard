@@ -275,13 +275,16 @@
                                                     <constraint firstAttribute="height" constant="40" id="dYw-9p-94f"/>
                                                 </constraints>
                                                 <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelButtonDidTap:" destination="PCw-CE-VkM" eventType="touchUpInside" id="lDe-ma-tWA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBm-qw-OqA">
                                                 <rect key="frame" x="146" y="0.0" width="218" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="8MS-DG-BRr"/>
                                                 </constraints>
-                                                <state key="normal" title="Press for Action"/>
+                                                <state key="normal" title="actionButton"/>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -313,6 +316,10 @@
                             <constraint firstItem="rtC-yX-WUo" firstAttribute="trailing" secondItem="n9t-ie-BYE" secondAttribute="trailing" id="rJN-wC-vUi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="GBm-qw-OqA" id="153-gd-8KP"/>
+                        <outlet property="cancelButton" destination="RMY-oJ-82s" id="VMD-Ez-WXu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLd-Zy-2qu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

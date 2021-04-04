@@ -13,11 +13,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        showBalanceButton.setTitle(__("show_balance_button_title"), for: .normal)
-        showTransactionsButton.setTitle(__("show_transactions_button_title"), for: .normal)
-        cashWithdrawalButton.setTitle(__("cash_withdrawal_button_title"), for: .normal)
-        topUpDepositButton.setTitle(__("top_up_deposit_button_title"), for: .normal)
-        topUpPhoneButton.setTitle(__("top_up_phone_button_title"), for: .normal)
+        showBalanceButton.setTitle(__("hs_show_balance_button_title"), for: .normal)
+        showTransactionsButton.setTitle(__("hs_show_transactions_button_title"), for: .normal)
+        cashWithdrawalButton.setTitle(__("hs_cash_withdrawal_button_title"), for: .normal)
+        topUpDepositButton.setTitle(__("hs_top_up_deposit_button_title"), for: .normal)
+        topUpPhoneButton.setTitle(__("hs_top_up_phone_button_title"), for: .normal)
     }
     
     //MARK: -IBActions:
@@ -51,12 +51,12 @@ private extension HomeViewController {
         
         guard let buttonTitle = sender.currentTitle else { return }
         switch buttonTitle {
-        case __("cash_withdrawal_button_title"):
-            destinationVC.title = __("cash_withdrawal_bar_title")
-        case __("top_up_deposit_button_title"):
-            destinationVC.title = __("top_up_deposit_bar_title")
-        case __("top_up_phone_button_title"):
-            destinationVC.title = __("top_up_phone_bar_title")
+        case __("hs_cash_withdrawal_button_title"):
+            destinationVC.title = __("as_cash_withdrawal_bar_title")
+        case __("hs_top_up_deposit_button_title"):
+            destinationVC.title = __("as_top_up_deposit_bar_title")
+        case __("hs_top_up_phone_button_title"):
+            destinationVC.title = __("as_top_up_phone_bar_title")
         default:
             break
         }
