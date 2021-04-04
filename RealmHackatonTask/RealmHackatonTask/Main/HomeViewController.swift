@@ -5,14 +5,6 @@ class HomeViewController: UIViewController {
     //TODO: Currently is set as Constant, need to Replace with value comming from DB:
     let currentBalance = 888
     
-    private var actionViewController: UIViewController {
-        actionStoryboard.instantiateViewController(identifier: "ActionViewController")
-    }
-    
-    private lazy var actionStoryboard: UIStoryboard = {
-        UIStoryboard(name: "ActionScreen", bundle: nil)
-    }()
-    
     //TODO: Currently not used:
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +36,8 @@ class HomeViewController: UIViewController {
 //MARK: -Helpers:
 private extension HomeViewController {
     func proceedToActionView() {
-        self.show(actionViewController, sender: nil)
+        let actionStoryboard = UIStoryboard(name: "ActionScreen", bundle: nil)
+        let destinationVC = actionStoryboard.instantiateViewController(identifier: "ActionViewController")
+        show(destinationVC, sender: nil)
     }
 }
