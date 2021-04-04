@@ -7,9 +7,6 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var topUpDepositButton: UIButton!
     @IBOutlet private weak var topUpPhoneButton: UIButton!
     
-    //TODO: Currently is set as Constant, need to Replace with value comming from DB:
-    private let currentBalance = 888
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +34,7 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showBalance" {
             if let destinationVC = segue.destination as? BalanceViewController {
-                destinationVC.balanceToDisplay = currentBalance
+                destinationVC.balanceToDisplay = Core.accountModel.balance
             }
         }
     }

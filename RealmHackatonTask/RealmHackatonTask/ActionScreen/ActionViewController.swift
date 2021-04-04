@@ -13,7 +13,7 @@ class ActionViewController: UIViewController {
     @IBOutlet private weak var actionButton: UIButton!
     @IBOutlet private weak var cancelButton: UIButton!
     
-    private let model = AccountModel()
+    private let model = Core.accountModel
     
     private var type: TransactionType? {
         switch self.title {
@@ -30,7 +30,7 @@ class ActionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateLabel()
         cancelButton.setTitle(__("as_cancel_button_title"), for: .normal)
     }
     

@@ -1,8 +1,8 @@
 import Foundation
 
 class AccountModel {
-//   TODO: temporary value provided as constant, need to replace with value from DB
-    var balance = 0
+    //TODO: Currently is set as Constant, need to Replace with value comming from DB:
+    var balance = 888
 
     func increaseAccount(by value: Int) {
         balance += value

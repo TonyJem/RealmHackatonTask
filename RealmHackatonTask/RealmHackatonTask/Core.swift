@@ -1,5 +1,5 @@
 import Foundation
 
 struct Core {
-    let accountModel = AccountModel()
+    static let accountModel = AccountModel()
 }
