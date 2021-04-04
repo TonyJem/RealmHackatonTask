@@ -44,6 +44,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <state key="normal" title="-"/>
+                                                                        <connections>
+                                                                            <action selector="decreaseByOneButtonDidTap:" destination="PCw-CE-VkM" eventType="touchUpInside" id="3HV-WX-TxF"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,6 +72,9 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <state key="normal" title="+"/>
+                                                                        <connections>
+                                                                            <action selector="increaseByOneButtonDidTap:" destination="PCw-CE-VkM" eventType="touchUpInside" id="Vrt-H2-Zno"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -318,7 +324,10 @@
                     </view>
                     <connections>
                         <outlet property="actionButton" destination="GBm-qw-OqA" id="153-gd-8KP"/>
+                        <outlet property="amountLabel" destination="2g3-Zm-dWj" id="l7a-DX-vPy"/>
                         <outlet property="cancelButton" destination="RMY-oJ-82s" id="VMD-Ez-WXu"/>
+                        <outlet property="decreaseByOneButton" destination="3F1-cA-bsZ" id="seX-na-B5D"/>
+                        <outlet property="increaseByOneButton" destination="o8J-uk-Tyk" id="Val-yz-7Bh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLd-Zy-2qu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

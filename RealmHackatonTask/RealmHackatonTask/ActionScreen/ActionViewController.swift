@@ -7,8 +7,13 @@ enum TransactionType {
 }
 
 class ActionViewController: UIViewController {
+    @IBOutlet private weak var decreaseByOneButton: UIButton!
+    @IBOutlet private weak var amountLabel: UILabel!
+    @IBOutlet private weak var increaseByOneButton: UIButton!
     @IBOutlet private weak var actionButton: UIButton!
     @IBOutlet private weak var cancelButton: UIButton!
+    
+    private let model = AccountModel()
     
     private var type: TransactionType? {
         switch self.title {
@@ -29,7 +34,24 @@ class ActionViewController: UIViewController {
         cancelButton.setTitle(__("as_cancel_button_title"), for: .normal)
     }
     
+    @IBAction func decreaseByOneButtonDidTap(_ sender: Any) {
+        model.reduceAccaount(by: 1)
+        updateLabel()
+    }
+    
+    @IBAction func increaseByOneButtonDidTap(_ sender: UIButton) {
+        model.increaseAccount(by: 1)
+        updateLabel()
+    }
+    
     @IBAction func cancelButtonDidTap(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+}
+
+//MARK: Helpers
+private extension ActionViewController {
+    func updateLabel() {
+        amountLabel.text = "$ \(model.balance)"
     }
 }
