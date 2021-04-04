@@ -69,7 +69,7 @@
 		3A9A2CE02619ACBF00C8E052 /* RealmHackatonTask */ = {
 			isa = PBXGroup;
 			children = (
-				3A9A2D0D261A134A00C8E052 /* HomeScreen */,
+				3A9A2D0D261A134A00C8E052 /* Main */,
 				3A9A2D0E261A137100C8E052 /* ActionScreen */,
 				3A9A2CEA2619ACC100C8E052 /* Assets.xcassets */,
 			);
@@ -85,14 +85,14 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
-		3A9A2D0D261A134A00C8E052 /* HomeScreen */ = {
+		3A9A2D0D261A134A00C8E052 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				3A9A2CE72619ACBF00C8E052 /* Main.storyboard */,
 				3A9A2CE52619ACBF00C8E052 /* HomeViewController.swift */,
 				3A9A2D09261A129300C8E052 /* BalanceViewController.swift */,
 			);
-			path = HomeScreen;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		3A9A2D0E261A137100C8E052 /* ActionScreen */ = {
