@@ -17,6 +17,7 @@
 		3A9A2CFA2619AE6E00C8E052 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A9A2CF92619AE6E00C8E052 /* RealmSwift */; };
 		3A9A2CFD2619F61600C8E052 /* ActionScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9A2CFC2619F61600C8E052 /* ActionScreen.storyboard */; };
 		3A9A2D05261A0AEC00C8E052 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D04261A0AEC00C8E052 /* ActionViewController.swift */; };
+		3A9A2D0A261A129300C8E052 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D09261A129300C8E052 /* BalanceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3A9A2CEF2619ACC100C8E052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A9A2CFC2619F61600C8E052 /* ActionScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActionScreen.storyboard; sourceTree = "<group>"; };
 		3A9A2D04261A0AEC00C8E052 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		3A9A2D09261A129300C8E052 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +69,8 @@
 		3A9A2CE02619ACBF00C8E052 /* RealmHackatonTask */ = {
 			isa = PBXGroup;
 			children = (
-				3A9A2CE52619ACBF00C8E052 /* HomeViewController.swift */,
-				3A9A2D04261A0AEC00C8E052 /* ActionViewController.swift */,
-				3A9A2CE72619ACBF00C8E052 /* Main.storyboard */,
-				3A9A2CFC2619F61600C8E052 /* ActionScreen.storyboard */,
+				3A9A2D0D261A134A00C8E052 /* HomeScreen */,
+				3A9A2D0E261A137100C8E052 /* ActionScreen */,
 				3A9A2CEA2619ACC100C8E052 /* Assets.xcassets */,
 			);
 			path = RealmHackatonTask;
@@ -83,6 +83,25 @@
 				3A9A2CE32619ACBF00C8E052 /* SceneDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		3A9A2D0D261A134A00C8E052 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3A9A2CE72619ACBF00C8E052 /* Main.storyboard */,
+				3A9A2CE52619ACBF00C8E052 /* HomeViewController.swift */,
+				3A9A2D09261A129300C8E052 /* BalanceViewController.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		3A9A2D0E261A137100C8E052 /* ActionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3A9A2D04261A0AEC00C8E052 /* ActionViewController.swift */,
+				3A9A2CFC2619F61600C8E052 /* ActionScreen.storyboard */,
+			);
+			path = ActionScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +184,7 @@
 			files = (
 				3A9A2CE62619ACBF00C8E052 /* HomeViewController.swift in Sources */,
 				3A9A2CE22619ACBF00C8E052 /* AppDelegate.swift in Sources */,
+				3A9A2D0A261A129300C8E052 /* BalanceViewController.swift in Sources */,
 				3A9A2D05261A0AEC00C8E052 /* ActionViewController.swift in Sources */,
 				3A9A2CE42619ACBF00C8E052 /* SceneDelegate.swift in Sources */,
 			);
