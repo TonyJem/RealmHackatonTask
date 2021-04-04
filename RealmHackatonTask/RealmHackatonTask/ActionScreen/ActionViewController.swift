@@ -26,7 +26,10 @@ class ActionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("🟢 Bar Title is: \(String(describing: type))")
-        
+        cancelButton.setTitle(__("as_cancel_button_title"), for: .normal)
+    }
+    
+    @IBAction func cancelButtonDidTap(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
 }
