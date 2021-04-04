@@ -1,13 +1,23 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    @IBOutlet private weak var showBalanceButton: UIButton!
+    @IBOutlet private weak var showTransactionsButton: UIButton!
+    @IBOutlet private weak var cashWithdrawalButton: UIButton!
+    @IBOutlet private weak var topUpDepositButton: UIButton!
+    @IBOutlet private weak var topUpPhoneButton: UIButton!
     
     //TODO: Currently is set as Constant, need to Replace with value comming from DB:
     let currentBalance = 888
     
-    //TODO: Currently not used:
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        showBalanceButton.setTitle(__("show_balance_button_title"), for: .normal)
+        showTransactionsButton.setTitle(__("show_transactions_button_title"), for: .normal)
+        cashWithdrawalButton.setTitle(__("cash_withdrawal_button_title"), for: .normal)
+        topUpDepositButton.setTitle(__("top_up_deposit_button_title"), for: .normal)
+        topUpPhoneButton.setTitle(__("top_up_phone_button_title"), for: .normal)
     }
     
     //MARK: -IBActions:
@@ -41,12 +51,12 @@ private extension HomeViewController {
         
         guard let buttonTitle = sender.currentTitle else { return }
         switch buttonTitle {
-        case "Cash Withdrawal":
-            destinationVC.title = "Cash Withdrawal"
-        case "Top Up Deposit":
-            destinationVC.title = "Top Up Deposit"
-        case "Top Up Phone Account":
-            destinationVC.title = "Top Up Phone Account"
+        case __("cash_withdrawal_button_title"):
+            destinationVC.title = __("cash_withdrawal_bar_title")
+        case __("top_up_deposit_button_title"):
+            destinationVC.title = __("top_up_deposit_bar_title")
+        case __("top_up_phone_button_title"):
+            destinationVC.title = __("top_up_phone_bar_title")
         default:
             break
         }

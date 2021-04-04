@@ -1,0 +1,14 @@
+//MARK: -Template:
+"" = "";
+
+//MARK: -Button titles:
+"show_balance_button_title" = "Show Balance";
+"show_transactions_button_title" = "Show Transactions";
+"cash_withdrawal_button_title" = "Cash Withdrawal";
+"top_up_deposit_button_title" = "Top Up Deposit";
+"top_up_phone_button_title" = "Top Up Phone Account";
+
+//MARK: -Template:
+"cash_withdrawal_bar_title" = "Cash Withdrawal";
+"top_up_deposit_bar_title" = "Top Up Deposit";
+"top_up_phone_bar_title" = "Top Up Phone Account";

@@ -19,6 +19,8 @@
 		3A9A2D05261A0AEC00C8E052 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D04261A0AEC00C8E052 /* ActionViewController.swift */; };
 		3A9A2D0A261A129300C8E052 /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D09261A129300C8E052 /* BalanceViewController.swift */; };
 		3A9A2D1E261A398700C8E052 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D1D261A398700C8E052 /* Action.swift */; };
+		3A9A2D24261A4B8400C8E052 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A9A2D23261A4B8400C8E052 /* Localizable.strings */; };
+		3A9A2D27261A4D0400C8E052 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D26261A4D0400C8E052 /* Localizations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		3A9A2D04261A0AEC00C8E052 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		3A9A2D09261A129300C8E052 /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
 		3A9A2D1D261A398700C8E052 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		3A9A2D23261A4B8400C8E052 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		3A9A2D26261A4D0400C8E052 /* Localizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				3A9A2CEA2619ACC100C8E052 /* Assets.xcassets */,
+				3A9A2D23261A4B8400C8E052 /* Localizable.strings */,
+				3A9A2D26261A4D0400C8E052 /* Localizations.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -179,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9A2D24261A4B8400C8E052 /* Localizable.strings in Resources */,
 				3A9A2CFD2619F61600C8E052 /* ActionScreen.storyboard in Resources */,
 				3A9A2CEE2619ACC100C8E052 /* LaunchScreen.storyboard in Resources */,
 				3A9A2CEB2619ACC100C8E052 /* Assets.xcassets in Resources */,
@@ -197,6 +204,7 @@
 				3A9A2D1E261A398700C8E052 /* Action.swift in Sources */,
 				3A9A2CE22619ACBF00C8E052 /* AppDelegate.swift in Sources */,
 				3A9A2D0A261A129300C8E052 /* BalanceViewController.swift in Sources */,
+				3A9A2D27261A4D0400C8E052 /* Localizations.swift in Sources */,
 				3A9A2D05261A0AEC00C8E052 /* ActionViewController.swift in Sources */,
 				3A9A2CE42619ACBF00C8E052 /* SceneDelegate.swift in Sources */,
 			);

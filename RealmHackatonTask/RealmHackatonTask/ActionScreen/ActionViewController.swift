@@ -10,11 +10,11 @@ class ActionViewController: UIViewController {
  
     var type: TransactionType? {
         switch self.title {
-        case "Cash Withdrawal":
+        case __("cash_withdrawal_bar_title"):
             return .cashWithdrawal
-        case "Top Up Deposit":
+        case __("top_up_deposit_bar_title"):
             return .topUpDeposit
-        case "Top Up Phone Account":
+        case __("top_up_phone_bar_title"):
             return .topUpPhoneAccount
         default:
             return nil
@@ -23,6 +23,8 @@ class ActionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("🟢 Bar Title is: \(String(describing: type))")
         
     }
 }

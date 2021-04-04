@@ -106,6 +106,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FeE-V7-xPn"/>
+                    <connections>
+                        <outlet property="cashWithdrawalButton" destination="ObP-rN-A41" id="NFG-zb-DIe"/>
+                        <outlet property="showBalanceButton" destination="gsj-r6-aap" id="yEJ-qC-7iR"/>
+                        <outlet property="showTransactionsButton" destination="Kqt-Bz-LT8" id="xde-uP-5Q5"/>
+                        <outlet property="topUpDepositButton" destination="Xm5-Lf-SJp" id="iP0-tz-PLN"/>
+                        <outlet property="topUpPhoneButton" destination="ypO-33-C6v" id="acP-fi-ugD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
