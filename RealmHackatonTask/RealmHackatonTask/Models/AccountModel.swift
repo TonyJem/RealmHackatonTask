@@ -2,14 +2,14 @@ import Foundation
 
 class AccountModel {
     //TODO: Currently is set as Constant, need to Replace with value comming from DB:
-    var balance = 888
+    var balance = 8
     
     func withdraw(_ amount: Int) {
         balance -= amount
         print("🟢 Withdraw amount: \(amount).\nCurrent balance is: \(balance).")
     }
     
-    func topUpAccount(with amount: Int) {
+    func topUpDeposit(with amount: Int) {
         balance += amount
         print("🟢 Top Up Account with amount: \(amount).\nCurrent balance is: \(balance).")
     }
