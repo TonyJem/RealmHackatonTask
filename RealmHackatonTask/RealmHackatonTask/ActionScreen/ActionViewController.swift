@@ -21,7 +21,6 @@ class ActionViewController: UIViewController {
     
     private var selectedTransaction: Transaction?
     private var defaultButtons: [DefaultAmountButton] = []
-    
     private var labelValue = 0 {
         didSet {
             amountLabel.text = String(labelValue).addCurrency()
@@ -31,7 +30,7 @@ class ActionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelValue = model.balance
+        labelValue = 0
         defaultButtons = [button11, button12, button13, button14,
                           button21, button22, button23, button24]
         for (index, button) in defaultButtons.enumerated() {
@@ -42,7 +41,7 @@ class ActionViewController: UIViewController {
         
         switch self.title {
         case __("as_cash_withdrawal_bar_title"):
-            selectedTransaction = Withdrawal(action: Action(transactionType: .cashWithdrawal),
+            selectedTransaction = CashWithdrawal(action: Action(transactionType: .cashWithdrawal),
                                              actionButtonTitle: __("as_withdraw_button_title"))
         case __("as_top_up_deposit_bar_title"):
             selectedTransaction = TopUpDeposit(action: Action(transactionType: .topUpDeposit),
@@ -74,11 +73,30 @@ class ActionViewController: UIViewController {
     @IBAction func cancelButtonDidTap(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func actionButtonDidTap(_ sender: UIButton) {
+        callConfirmTransactionAlert()
+    }
+    
 }
 
 //MARK: - Helpers
 private extension ActionViewController {
     func updateLabelValue(with value: Int) {
         labelValue += value
+    }
+    
+    func callConfirmTransactionAlert() {
+        guard let transaction =  selectedTransaction else { return }
+        let alert = UIAlertController(title: transaction.alertTitle,
+                                      message: "Please confirm or cancel this transaction. Thank You!",
+                                      preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Confirm", style: .default) { _ in
+            transaction.onActionButtonTap(selectedAmount: self.labelValue)
+        }
+        let cancelAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(alertAction)
+        alert.addAction(cancelAlertAction)
+        present(alert, animated: true, completion: nil)
     }
 }
