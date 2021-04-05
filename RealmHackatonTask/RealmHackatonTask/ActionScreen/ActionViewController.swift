@@ -92,8 +92,14 @@ private extension ActionViewController {
                                       message: "Please confirm or cancel this transaction. Thank You!",
                                       preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Confirm", style: .default) { [self] _ in
+            
             transaction.onActionButtonTap(selectedAmount: selectedAmount)
-            showSuccessAlert(with: transaction.successMessage())
+            if transaction.hasError() {
+                showErrorAlert(with: transaction.errorMessage())
+            } else {
+                showSuccessAlert(with: transaction.successMessage())
+            }
+            
         }
         let cancelAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(alertAction)
@@ -105,9 +111,7 @@ private extension ActionViewController {
         let alert = UIAlertController(title: "Transaction Error!",
                                       message: message,
                                       preferredStyle: .alert)
-        let okAlertAction = UIAlertAction(title: "Ok", style: .default) { _ in
-            self.navigationController?.popViewController(animated: true)
-        }
+        let okAlertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(okAlertAction)
         present(alert, animated: true, completion: nil)
     }
@@ -116,7 +120,9 @@ private extension ActionViewController {
         let alert = UIAlertController(title: "Transaction Success!",
                                       message: message,
                                       preferredStyle: .alert)
-        let okAlertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let okAlertAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            self.navigationController?.popViewController(animated: true)
+        }
         alert.addAction(okAlertAction)
         present(alert, animated: true, completion: nil)
     }

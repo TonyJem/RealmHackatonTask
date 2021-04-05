@@ -21,7 +21,9 @@ class Transaction {
         self.actionButtonTitle = actionButtonTitle
     }
     
-    func onActionButtonTap(selectedAmount: Int) {}
+    func onActionButtonTap(selectedAmount: Int) {
+        self.selectedAmount = selectedAmount
+    }
     
     func transactionAlertTitle() -> String { return "" }
     func hasError() -> Bool { return true}
@@ -30,6 +32,7 @@ class Transaction {
 }
 
 class CashWithdrawal: Transaction {
+    
     override func transactionAlertTitle() -> String {
         return "Selected transaction is:\nCash Withdrawal"
     }
