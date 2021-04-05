@@ -15,6 +15,7 @@ class ActionViewController: UIViewController {
     @IBOutlet private weak var button24: DefaultAmountButton!
     @IBOutlet private weak var cancelButton: UIButton!
     
+    private let subtractAndAddButtonStep = 1
     private let buttonValues = [5, 10, 15, 20, 50, 100, 200, 500]
     private let model = Core.accountModel
     
@@ -57,11 +58,11 @@ class ActionViewController: UIViewController {
     }
     
     @IBAction func subtractButtonDidTap(_ sender: UIButton) {
-        updateLabelValue(with: -1)
+        updateLabelValue(with: -subtractAndAddButtonStep)
     }
     
     @IBAction func addButtonDidTap(_ sender: UIButton) {
-        updateLabelValue(with: 1)
+        updateLabelValue(with: subtractAndAddButtonStep)
     }
     
     @IBAction func defaultAmountButtonDidTap(_ sender: DefaultAmountButton) {
