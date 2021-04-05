@@ -11,7 +11,7 @@ struct Action {
 }
 
 class Transaction {
-    var alertTitle = "Top Up"
+    var alertTitle = ""
     func onActionButtonTap(selectedAmount: Int) {}
     
     let action: Action
@@ -25,12 +25,13 @@ class Transaction {
 }
 
 class CashWithdrawal: Transaction {
+    private var _alertTitle = "Selected transaction is:\nCash Withdrawal"
     override var alertTitle: String {
         get {
-            return "Selected transaction is:\nCash Withdrawal"
+            return _alertTitle
         }
         set {
-            self.alertTitle = newValue
+            _alertTitle = newValue
         }
     }
     
@@ -40,12 +41,13 @@ class CashWithdrawal: Transaction {
 }
 
 class TopUpDeposit: Transaction {
+    private var _alertTitle = "Selected transaction is:\nTop Up Deposit"
     override var alertTitle: String {
         get {
-            return "Selected transaction is:\nTop Up Deposit"
+            return _alertTitle
         }
         set {
-            self.alertTitle = newValue
+            _alertTitle = newValue
         }
     }
     
@@ -55,13 +57,13 @@ class TopUpDeposit: Transaction {
 }
 
 class TopUpPhone: Transaction {
-    
+    private var _alertTitle = "Selected transaction is:\nTop Up Phone"
     override var alertTitle: String {
         get {
-            return "Selected transaction is:\nTop Up Phone"
+            return _alertTitle
         }
         set {
-            self.alertTitle = newValue
+            _alertTitle = newValue
         }
     }
     
