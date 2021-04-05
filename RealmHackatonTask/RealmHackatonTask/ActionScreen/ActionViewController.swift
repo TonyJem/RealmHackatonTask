@@ -1,11 +1,5 @@
 import UIKit
 
-enum TransactionType {
-    case cashWithdrawal
-    case topUpDeposit
-    case topUpPhoneAccount
-}
-
 class ActionViewController: UIViewController {
     @IBOutlet private weak var subtractButton: UIButton!
     @IBOutlet private weak var amountLabel: UILabel!
@@ -15,22 +9,11 @@ class ActionViewController: UIViewController {
     
     private let model = Core.accountModel
     
+    private var selectedTransaction: Transaction?
+    
     private var labelValue = 0 {
         didSet {
             amountLabel.text = "$ \(labelValue)"
-        }
-    }
-    
-    private var type: TransactionType? {
-        switch self.title {
-        case __("as_cash_withdrawal_bar_title"):
-            return .cashWithdrawal
-        case __("as_top_up_deposit_bar_title"):
-            return .topUpDeposit
-        case __("as_top_up_phone_bar_title"):
-            return .topUpPhoneAccount
-        default:
-            return nil
         }
     }
     
@@ -39,6 +22,22 @@ class ActionViewController: UIViewController {
         
         labelValue = model.balance
         cancelButton.setTitle(__("as_cancel_button_title"), for: .normal)
+        
+        switch self.title {
+        case __("as_cash_withdrawal_bar_title"):
+            selectedTransaction = Withdrawal(action: Action(transactionType: .cashWithdrawal),
+                                             actionButtonTitle: __("as_withdraw_button_title"))
+        case __("as_top_up_deposit_bar_title"):
+            selectedTransaction = TopUpDeposit(action: Action(transactionType: .topUpDeposit),
+                                             actionButtonTitle: __("as_top_up_deposit_button_title"))
+        case __("as_top_up_phone_bar_title"):
+            selectedTransaction = TopUpPhone(action: Action(transactionType: .topUpPhoneAccount),
+                                             actionButtonTitle: __("as_top_up_phone_button_title"))
+        default:
+            break
+        }
+        
+        actionButton.setTitle(selectedTransaction?.actionButtonTitle, for: .normal)
     }
     
     @IBAction func subtractButtonDidTap(_ sender: UIButton) {
