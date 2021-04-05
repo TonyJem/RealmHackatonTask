@@ -121,7 +121,7 @@
         <!--All Transactions-->
         <scene sceneID="b0N-OH-3Zj">
             <objects>
-                <viewController id="TuL-oB-KkC" sceneMemberID="viewController">
+                <viewController id="TuL-oB-KkC" customClass="TransactionsListViewContoller" customModule="RealmHackatonTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PPi-FY-Rye">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,6 +141,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="All Transactions" id="7af-Ie-GRL"/>
+                    <connections>
+                        <outlet property="transactionsTableView" destination="8g5-pt-pDt" id="tOU-R5-Ogg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yc7-aN-oUp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
