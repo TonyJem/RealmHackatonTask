@@ -33,6 +33,14 @@ class Transaction {
 
 class CashWithdrawal: Transaction {
     
+    override func onActionButtonTap(selectedAmount: Int) {
+        super.onActionButtonTap(selectedAmount: selectedAmount)
+        
+        if !hasError() {
+            Core.accountModel.withdraw(selectedAmount)
+        }
+    }
+    
     override func transactionAlertTitle() -> String {
         return "Selected transaction is:\nCash Withdrawal"
     }

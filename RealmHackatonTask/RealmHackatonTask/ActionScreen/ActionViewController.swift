@@ -92,14 +92,12 @@ private extension ActionViewController {
                                       message: "Please confirm or cancel this transaction. Thank You!",
                                       preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Confirm", style: .default) { [self] _ in
-            
             transaction.onActionButtonTap(selectedAmount: selectedAmount)
             if transaction.hasError() {
                 showErrorAlert(with: transaction.errorMessage())
             } else {
                 showSuccessAlert(with: transaction.successMessage())
             }
-            
         }
         let cancelAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(alertAction)
