@@ -27,7 +27,11 @@ class Transaction {
     }
     
     func transactionAlertTitle() -> String { return "" }
-    func hasError() -> Bool { return true}
+    
+    func hasError() -> Bool {
+        return selectedAmount > Core.accountModel.balance
+    }
+    
     func errorMessage() -> String { return "" }
     func successMessage() -> String { return "" }
 }
@@ -46,12 +50,8 @@ class CashWithdrawal: Transaction {
         return "Selected transaction is:\nCash Withdrawal"
     }
     
-    override func hasError() -> Bool {
-        return selectedAmount > Core.accountModel.balance
-    }
-    
     override func errorMessage() -> String {
-        return "Can't withdraw \(selectedAmount) amount.\nThere are only \(String(Core.accountModel.balance).addCurrency()) on balance now!"
+        return "Can't withdraw \(selectedAmount) amount.\nThere are only \(String(Core.accountModel.balance).addCurrency()) are available on balance now!"
     }
     
     override func successMessage() -> String {
@@ -85,9 +85,24 @@ class TopUpDeposit: Transaction {
     }
 }
 
-//TODO: Finish this class same as CashWithdrawal class
 class TopUpPhone: Transaction {
     override func onActionButtonTap(selectedAmount: Int) {
-        Core.accountModel.topUpPhone(with: selectedAmount)
+        super.onActionButtonTap(selectedAmount: selectedAmount)
+        
+        if !hasError() {
+            Core.accountModel.topUpPhone(with: selectedAmount)
+        }
+    }
+    
+    override func transactionAlertTitle() -> String {
+        return "Selected transaction is:\nTopup Phone Account"
+    }
+    
+    override func errorMessage() -> String {
+        return "Can't topup phone with \(selectedAmount) amount.\nThere are only \(String(Core.accountModel.balance).addCurrency()) are available on balance now!"
+    }
+    
+    override func successMessage() -> String {
+        return "All Ok! Your recently topedup phone account with: \(String(selectedAmount).addCurrency()) amount."
     }
 }
