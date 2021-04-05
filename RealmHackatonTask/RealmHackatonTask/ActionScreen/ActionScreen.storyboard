@@ -117,9 +117,12 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Du1-7t-Dcu">
                                                                 <rect key="frame" x="0.0" y="0.0" width="71.5" height="71.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0S-QD-JAs">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0S-QD-JAs" customClass="DefaultAmountButton" customModule="RealmHackatonTask" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="71.5" height="71.5"/>
                                                                         <state key="normal" title="$ 5"/>
+                                                                        <connections>
+                                                                            <action selector="defaultAmountButtonDidTap:" destination="PCw-CE-VkM" eventType="touchUpInside" id="EgX-Iq-vjw"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -134,9 +137,12 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbh-Bk-8oq">
                                                                 <rect key="frame" x="97.5" y="0.0" width="71.5" height="71.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMT-E4-d4n">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMT-E4-d4n" customClass="DefaultAmountButton" customModule="RealmHackatonTask" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="71.5" height="71.5"/>
                                                                         <state key="normal" title="$ 10"/>
+                                                                        <connections>
+                                                                            <action selector="defaultAmountButtonDidTap:" destination="PCw-CE-VkM" eventType="touchUpInside" id="sX1-Dy-kd4"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -151,9 +157,12 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMo-VV-3n8">
                                                                 <rect key="frame" x="195" y="0.0" width="71.5" height="71.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86g-tU-LpU">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86g-tU-LpU" customClass="DefaultAmountButton" customModule="RealmHackatonTask" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="71.5" height="71.5"/>
                                                                         <state key="normal" title="$ 15"/>
+                                                                        <connections>
+                                                                            <action selector="defaultAmountButtonDidTap:" destination="PCw-CE-VkM" eventType="touchUpInside" id="7nS-v9-bbL"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -168,9 +177,12 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acQ-Uk-6o3">
                                                                 <rect key="frame" x="292.5" y="0.0" width="71.5" height="71.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1F0-x3-GII">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1F0-x3-GII" customClass="DefaultAmountButton" customModule="RealmHackatonTask" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="71.5" height="71.5"/>
                                                                         <state key="normal" title="$ 20"/>
+                                                                        <connections>
+                                                                            <action selector="defaultAmountButtonDidTap:" destination="PCw-CE-VkM" eventType="touchUpInside" id="W8T-Kn-eRy"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -193,9 +205,12 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFy-XZ-Xsj">
                                                                 <rect key="frame" x="0.0" y="0.0" width="71.5" height="71.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLx-ME-gw9">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLx-ME-gw9" customClass="DefaultAmountButton" customModule="RealmHackatonTask" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="71.5" height="71.5"/>
                                                                         <state key="normal" title="$ 50"/>
+                                                                        <connections>
+                                                                            <action selector="defaultAmountButtonDidTap:" destination="PCw-CE-VkM" eventType="touchUpInside" id="75x-W7-4gB"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -210,9 +225,12 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kro-hQ-sdJ">
                                                                 <rect key="frame" x="97.5" y="0.0" width="71.5" height="71.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrz-EK-aae">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrz-EK-aae" customClass="DefaultAmountButton" customModule="RealmHackatonTask" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="71.5" height="71.5"/>
                                                                         <state key="normal" title="$ 100"/>
+                                                                        <connections>
+                                                                            <action selector="defaultAmountButtonDidTap:" destination="PCw-CE-VkM" eventType="touchUpInside" id="tau-6f-Grm"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -227,9 +245,12 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQM-jl-K0a">
                                                                 <rect key="frame" x="195" y="0.0" width="71.5" height="71.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qg-n9-B2a">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qg-n9-B2a" customClass="DefaultAmountButton" customModule="RealmHackatonTask" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="71.5" height="71.5"/>
                                                                         <state key="normal" title="$ 200"/>
+                                                                        <connections>
+                                                                            <action selector="defaultAmountButtonDidTap:" destination="PCw-CE-VkM" eventType="touchUpInside" id="6RG-SA-m2o"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -244,9 +265,12 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4e-gC-Cdl">
                                                                 <rect key="frame" x="292.5" y="0.0" width="71.5" height="71.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYe-Aw-1Ay">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYe-Aw-1Ay" customClass="DefaultAmountButton" customModule="RealmHackatonTask" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="71.5" height="71.5"/>
                                                                         <state key="normal" title="$ 500"/>
+                                                                        <connections>
+                                                                            <action selector="defaultAmountButtonDidTap:" destination="PCw-CE-VkM" eventType="touchUpInside" id="ITD-J1-Rcl"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -326,15 +350,15 @@
                         <outlet property="actionButton" destination="GBm-qw-OqA" id="153-gd-8KP"/>
                         <outlet property="addButton" destination="o8J-uk-Tyk" id="Val-yz-7Bh"/>
                         <outlet property="amountLabel" destination="2g3-Zm-dWj" id="l7a-DX-vPy"/>
+                        <outlet property="button11" destination="I0S-QD-JAs" id="dLO-Nx-Y9W"/>
+                        <outlet property="button12" destination="BMT-E4-d4n" id="xd1-2s-Qhs"/>
+                        <outlet property="button13" destination="86g-tU-LpU" id="qRf-y1-5Tj"/>
+                        <outlet property="button14" destination="1F0-x3-GII" id="uQl-y5-CK4"/>
+                        <outlet property="button21" destination="oLx-ME-gw9" id="GCB-gA-SVV"/>
+                        <outlet property="button22" destination="yrz-EK-aae" id="w1k-NN-cBe"/>
+                        <outlet property="button23" destination="8qg-n9-B2a" id="RVJ-9W-H0d"/>
+                        <outlet property="button24" destination="kYe-Aw-1Ay" id="Zwr-sP-MDF"/>
                         <outlet property="cancelButton" destination="RMY-oJ-82s" id="VMD-Ez-WXu"/>
-                        <outlet property="defaultAmountButton11" destination="I0S-QD-JAs" id="ity-OJ-sTA"/>
-                        <outlet property="defaultAmountButton12" destination="BMT-E4-d4n" id="vZZ-DQ-rDp"/>
-                        <outlet property="defaultAmountButton13" destination="86g-tU-LpU" id="D7Q-98-VJc"/>
-                        <outlet property="defaultAmountButton14" destination="1F0-x3-GII" id="7lI-GM-hL6"/>
-                        <outlet property="defaultAmountButton21" destination="oLx-ME-gw9" id="WEA-x7-JJc"/>
-                        <outlet property="defaultAmountButton22" destination="yrz-EK-aae" id="iIg-wx-f8B"/>
-                        <outlet property="defaultAmountButton23" destination="8qg-n9-B2a" id="lnp-hI-FRn"/>
-                        <outlet property="defaultAmountButton24" destination="kYe-Aw-1Ay" id="QU5-kR-eXc"/>
                         <outlet property="subtractButton" destination="3F1-cA-bsZ" id="seX-na-B5D"/>
                     </connections>
                 </viewController>

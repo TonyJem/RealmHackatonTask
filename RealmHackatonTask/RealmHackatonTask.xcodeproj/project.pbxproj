@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A289ACB261B01B5006E25C4 /* DefaultAmountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A289ACA261B01B5006E25C4 /* DefaultAmountButton.swift */; };
 		3A9A2CE22619ACBF00C8E052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2CE12619ACBF00C8E052 /* AppDelegate.swift */; };
 		3A9A2CE42619ACBF00C8E052 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2CE32619ACBF00C8E052 /* SceneDelegate.swift */; };
 		3A9A2CE62619ACBF00C8E052 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2CE52619ACBF00C8E052 /* HomeViewController.swift */; };
@@ -23,10 +24,11 @@
 		3A9A2D27261A4D0400C8E052 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D26261A4D0400C8E052 /* Localizations.swift */; };
 		3A9A2D2C261A5A2B00C8E052 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D2B261A5A2B00C8E052 /* AccountModel.swift */; };
 		3A9A2D30261A5EEC00C8E052 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D2F261A5EEC00C8E052 /* Core.swift */; };
-		3A9A2D3D261AE3BD00C8E052 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D3C261AE3BD00C8E052 /* StringExtension.swift */; };
+		3A9A2D3D261AE3BD00C8E052 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D3C261AE3BD00C8E052 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A289ACA261B01B5006E25C4 /* DefaultAmountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAmountButton.swift; sourceTree = "<group>"; };
 		3A9A2CDE2619ACBF00C8E052 /* RealmHackatonTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmHackatonTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9A2CE12619ACBF00C8E052 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A9A2CE32619ACBF00C8E052 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +45,7 @@
 		3A9A2D26261A4D0400C8E052 /* Localizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
 		3A9A2D2B261A5A2B00C8E052 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		3A9A2D2F261A5EEC00C8E052 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
-		3A9A2D3C261AE3BD00C8E052 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		3A9A2D3C261AE3BD00C8E052 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				3A9A2D2F261A5EEC00C8E052 /* Core.swift */,
-				3A9A2D3C261AE3BD00C8E052 /* StringExtension.swift */,
+				3A289ACA261B01B5006E25C4 /* DefaultAmountButton.swift */,
+				3A9A2D3C261AE3BD00C8E052 /* Extensions.swift */,
 				3A9A2D0D261A134A00C8E052 /* Main */,
 				3A9A2D0E261A137100C8E052 /* ActionScreen */,
 				3A9A2D2A261A5A0F00C8E052 /* Models */,
@@ -219,9 +222,10 @@
 			files = (
 				3A9A2D30261A5EEC00C8E052 /* Core.swift in Sources */,
 				3A9A2CE62619ACBF00C8E052 /* HomeViewController.swift in Sources */,
-				3A9A2D3D261AE3BD00C8E052 /* StringExtension.swift in Sources */,
+				3A9A2D3D261AE3BD00C8E052 /* Extensions.swift in Sources */,
 				3A9A2D1E261A398700C8E052 /* Action.swift in Sources */,
 				3A9A2CE22619ACBF00C8E052 /* AppDelegate.swift in Sources */,
+				3A289ACB261B01B5006E25C4 /* DefaultAmountButton.swift in Sources */,
 				3A9A2D2C261A5A2B00C8E052 /* AccountModel.swift in Sources */,
 				3A9A2D0A261A129300C8E052 /* BalanceViewController.swift in Sources */,
 				3A9A2D27261A4D0400C8E052 /* Localizations.swift in Sources */,

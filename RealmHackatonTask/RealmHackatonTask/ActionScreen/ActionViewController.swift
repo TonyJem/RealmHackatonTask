@@ -5,21 +5,21 @@ class ActionViewController: UIViewController {
     @IBOutlet private weak var amountLabel: UILabel!
     @IBOutlet private weak var addButton: UIButton!
     @IBOutlet private weak var actionButton: UIButton!
-    @IBOutlet private weak var defaultAmountButton11: UIButton!
-    @IBOutlet private weak var defaultAmountButton12: UIButton!
-    @IBOutlet private weak var defaultAmountButton13: UIButton!
-    @IBOutlet private weak var defaultAmountButton14: UIButton!
-    @IBOutlet private weak var defaultAmountButton21: UIButton!
-    @IBOutlet private weak var defaultAmountButton22: UIButton!
-    @IBOutlet private weak var defaultAmountButton23: UIButton!
-    @IBOutlet private weak var defaultAmountButton24: UIButton!
+    @IBOutlet private weak var button11: DefaultAmountButton!
+    @IBOutlet private weak var button12: DefaultAmountButton!
+    @IBOutlet private weak var button13: DefaultAmountButton!
+    @IBOutlet private weak var button14: DefaultAmountButton!
+    @IBOutlet private weak var button21: DefaultAmountButton!
+    @IBOutlet private weak var button22: DefaultAmountButton!
+    @IBOutlet private weak var button23: DefaultAmountButton!
+    @IBOutlet private weak var button24: DefaultAmountButton!
     @IBOutlet private weak var cancelButton: UIButton!
     
     private let buttonValues = [5, 10, 15, 20, 50, 100, 200, 500]
     private let model = Core.accountModel
     
     private var selectedTransaction: Transaction?
-    private var defaultButtons: [UIButton] = []
+    private var defaultButtons: [DefaultAmountButton] = []
     
     private var labelValue = 0 {
         didSet {
@@ -31,17 +31,11 @@ class ActionViewController: UIViewController {
         super.viewDidLoad()
         
         labelValue = model.balance
-        defaultButtons = [defaultAmountButton11,
-                          defaultAmountButton12,
-                          defaultAmountButton13,
-                          defaultAmountButton14,
-                          defaultAmountButton21,
-                          defaultAmountButton22,
-                          defaultAmountButton23,
-                          defaultAmountButton24]
+        defaultButtons = [button11, button12, button13, button14,
+                          button21, button22, button23, button24]
         for (index, button) in defaultButtons.enumerated() {
-            let value = buttonValues[index]
-            button.setTitle(String(value).addCurrency(), for: .normal)
+            button.amount = buttonValues[index]
+            button.setTitle(String(button.amount).addCurrency(), for: .normal)
         }
         cancelButton.setTitle(__("as_cancel_button_title"), for: .normal)
         
@@ -68,6 +62,10 @@ class ActionViewController: UIViewController {
     
     @IBAction func addButtonDidTap(_ sender: UIButton) {
         updateLabelValue(with: 1)
+    }
+    
+    @IBAction func defaultAmountButtonDidTap(_ sender: DefaultAmountButton) {
+        updateLabelValue(with: sender.amount)
     }
     
     @IBAction func cancelButtonDidTap(_ sender: UIButton) {
