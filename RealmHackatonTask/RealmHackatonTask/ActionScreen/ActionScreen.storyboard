@@ -327,6 +327,14 @@
                         <outlet property="addButton" destination="o8J-uk-Tyk" id="Val-yz-7Bh"/>
                         <outlet property="amountLabel" destination="2g3-Zm-dWj" id="l7a-DX-vPy"/>
                         <outlet property="cancelButton" destination="RMY-oJ-82s" id="VMD-Ez-WXu"/>
+                        <outlet property="defaultAmountButton11" destination="I0S-QD-JAs" id="ity-OJ-sTA"/>
+                        <outlet property="defaultAmountButton12" destination="BMT-E4-d4n" id="vZZ-DQ-rDp"/>
+                        <outlet property="defaultAmountButton13" destination="86g-tU-LpU" id="D7Q-98-VJc"/>
+                        <outlet property="defaultAmountButton14" destination="1F0-x3-GII" id="7lI-GM-hL6"/>
+                        <outlet property="defaultAmountButton21" destination="oLx-ME-gw9" id="WEA-x7-JJc"/>
+                        <outlet property="defaultAmountButton22" destination="yrz-EK-aae" id="iIg-wx-f8B"/>
+                        <outlet property="defaultAmountButton23" destination="8qg-n9-B2a" id="lnp-hI-FRn"/>
+                        <outlet property="defaultAmountButton24" destination="kYe-Aw-1Ay" id="QU5-kR-eXc"/>
                         <outlet property="subtractButton" destination="3F1-cA-bsZ" id="seX-na-B5D"/>
                     </connections>
                 </viewController>
