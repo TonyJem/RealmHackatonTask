@@ -7,13 +7,19 @@ enum TransactionType {
 }
 
 class ActionViewController: UIViewController {
-    @IBOutlet private weak var decreaseByOneButton: UIButton!
+    @IBOutlet private weak var subtractButton: UIButton!
     @IBOutlet private weak var amountLabel: UILabel!
-    @IBOutlet private weak var increaseByOneButton: UIButton!
+    @IBOutlet private weak var addButton: UIButton!
     @IBOutlet private weak var actionButton: UIButton!
     @IBOutlet private weak var cancelButton: UIButton!
     
     private let model = Core.accountModel
+    
+    private var labelValue = 0 {
+        didSet {
+            amountLabel.text = "$ \(labelValue)"
+        }
+    }
     
     private var type: TransactionType? {
         switch self.title {
@@ -30,18 +36,17 @@ class ActionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateLabel()
+        
+        labelValue = model.balance
         cancelButton.setTitle(__("as_cancel_button_title"), for: .normal)
     }
     
-    @IBAction func decreaseByOneButtonDidTap(_ sender: Any) {
-        model.reduceBalance(by: 1)
-        updateLabel()
+    @IBAction func subtractButtonDidTap(_ sender: UIButton) {
+        updateLabelValue(with: -1)
     }
     
-    @IBAction func increaseByOneButtonDidTap(_ sender: UIButton) {
-        model.increaseBalance(by: 1)
-        updateLabel()
+    @IBAction func addButtonDidTap(_ sender: UIButton) {
+        updateLabelValue(with: 1)
     }
     
     @IBAction func cancelButtonDidTap(_ sender: UIButton) {
@@ -51,7 +56,7 @@ class ActionViewController: UIViewController {
 
 //MARK: Helpers
 private extension ActionViewController {
-    func updateLabel() {
-        amountLabel.text = "$ \(model.balance)"
+    func updateLabelValue(with value: Int) {
+        labelValue += value
     }
 }
