@@ -28,6 +28,7 @@
 		3AD2A220261B971300E526A4 /* TransactionsListViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2A21F261B971300E526A4 /* TransactionsListViewContoller.swift */; };
 		3AD2A224261B989400E526A4 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2A222261B989400E526A4 /* TransactionCell.swift */; };
 		3AD2A225261B989400E526A4 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AD2A223261B989400E526A4 /* TransactionCell.xib */; };
+		3AD2A22C261B9CF900E526A4 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2A22B261B9CF900E526A4 /* TransactionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		3AD2A21F261B971300E526A4 /* TransactionsListViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListViewContoller.swift; sourceTree = "<group>"; };
 		3AD2A222261B989400E526A4 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		3AD2A223261B989400E526A4 /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
+		3AD2A22B261B9CF900E526A4 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				3A9A2D2B261A5A2B00C8E052 /* AccountModel.swift */,
+				3AD2A22B261B9CF900E526A4 /* TransactionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				3A9A2D30261A5EEC00C8E052 /* Core.swift in Sources */,
 				3A9A2CE62619ACBF00C8E052 /* HomeViewController.swift in Sources */,
 				3A9A2D3D261AE3BD00C8E052 /* Extensions.swift in Sources */,
+				3AD2A22C261B9CF900E526A4 /* TransactionModel.swift in Sources */,
 				3A9A2D1E261A398700C8E052 /* TransactionFactory.swift in Sources */,
 				3A9A2CE22619ACBF00C8E052 /* AppDelegate.swift in Sources */,
 				3A289ACB261B01B5006E25C4 /* DefaultAmountButton.swift in Sources */,
