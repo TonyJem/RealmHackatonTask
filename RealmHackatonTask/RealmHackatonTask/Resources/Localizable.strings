@@ -1,14 +1,17 @@
-//MARK: -Template:
+//MARK: - Template:
 "" = "";
 
-//MARK: -HomeScreen:
+//MARK: - General stuf:
+"currencySign" = "$";
+
+//MARK: - HomeScreen:
 "hs_show_balance_button_title" = "Show Balance";
 "hs_show_transactions_button_title" = "Show Transactions";
 "hs_cash_withdrawal_button_title" = "Cash Withdrawal";
 "hs_top_up_deposit_button_title" = "Top Up Deposit";
 "hs_top_up_phone_button_title" = "Top Up Phone Account";
 
-//MARK: -ActionScreen:
+//MARK: - ActionScreen:
 "as_cash_withdrawal_bar_title" = "Cash Withdrawal";
 "as_top_up_deposit_bar_title" = "Top Up Deposit";
 "as_top_up_phone_bar_title" = "Top Up Phone Account";
@@ -17,4 +20,3 @@
 "as_withdraw_button_title" = "Withdraw!";
 "as_top_up_deposit_button_title" = "Top Up Deposit!";
 "as_top_up_phone_button_title" = "Top Up Phone!";
-

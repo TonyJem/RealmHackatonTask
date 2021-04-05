@@ -13,7 +13,7 @@ class ActionViewController: UIViewController {
     
     private var labelValue = 0 {
         didSet {
-            amountLabel.text = "$ \(labelValue)"
+            amountLabel.text = String(labelValue).addCurrency()
         }
     }
     
