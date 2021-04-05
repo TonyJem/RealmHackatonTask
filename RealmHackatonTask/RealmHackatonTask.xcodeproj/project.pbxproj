@@ -26,6 +26,8 @@
 		3A9A2D30261A5EEC00C8E052 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D2F261A5EEC00C8E052 /* Core.swift */; };
 		3A9A2D3D261AE3BD00C8E052 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2D3C261AE3BD00C8E052 /* Extensions.swift */; };
 		3AD2A220261B971300E526A4 /* TransactionsListViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2A21F261B971300E526A4 /* TransactionsListViewContoller.swift */; };
+		3AD2A224261B989400E526A4 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2A222261B989400E526A4 /* TransactionCell.swift */; };
+		3AD2A225261B989400E526A4 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AD2A223261B989400E526A4 /* TransactionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		3A9A2D2F261A5EEC00C8E052 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		3A9A2D3C261AE3BD00C8E052 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3AD2A21F261B971300E526A4 /* TransactionsListViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListViewContoller.swift; sourceTree = "<group>"; };
+		3AD2A222261B989400E526A4 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		3AD2A223261B989400E526A4 /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 				3A9A2CE52619ACBF00C8E052 /* HomeViewController.swift */,
 				3A9A2D09261A129300C8E052 /* BalanceViewController.swift */,
 				3AD2A21F261B971300E526A4 /* TransactionsListViewContoller.swift */,
+				3AD2A227261B98CD00E526A4 /* TransactionCell */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -142,6 +147,15 @@
 				3A9A2D2B261A5A2B00C8E052 /* AccountModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3AD2A227261B98CD00E526A4 /* TransactionCell */ = {
+			isa = PBXGroup;
+			children = (
+				3AD2A222261B989400E526A4 /* TransactionCell.swift */,
+				3AD2A223261B989400E526A4 /* TransactionCell.xib */,
+			);
+			path = TransactionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +224,7 @@
 			files = (
 				3A9A2D24261A4B8400C8E052 /* Localizable.strings in Resources */,
 				3A9A2CFD2619F61600C8E052 /* ActionScreen.storyboard in Resources */,
+				3AD2A225261B989400E526A4 /* TransactionCell.xib in Resources */,
 				3A9A2CEE2619ACC100C8E052 /* LaunchScreen.storyboard in Resources */,
 				3A9A2CEB2619ACC100C8E052 /* Assets.xcassets in Resources */,
 				3A9A2CE92619ACBF00C8E052 /* Main.storyboard in Resources */,
@@ -232,6 +247,7 @@
 				3A289ACB261B01B5006E25C4 /* DefaultAmountButton.swift in Sources */,
 				3A9A2D2C261A5A2B00C8E052 /* AccountModel.swift in Sources */,
 				3A9A2D0A261A129300C8E052 /* BalanceViewController.swift in Sources */,
+				3AD2A224261B989400E526A4 /* TransactionCell.swift in Sources */,
 				3A9A2D27261A4D0400C8E052 /* Localizations.swift in Sources */,
 				3A9A2D05261A0AEC00C8E052 /* ActionViewController.swift in Sources */,
 				3A9A2CE42619ACBF00C8E052 /* SceneDelegate.swift in Sources */,
