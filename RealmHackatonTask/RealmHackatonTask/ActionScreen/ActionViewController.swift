@@ -23,19 +23,19 @@ class ActionViewController: UIViewController {
     private var defaultButtons: [DefaultAmountButton] = []
     private var selectedAmount = 0 {
         didSet {
-            amountLabel.text = String(selectedAmount).addCurrency()
+            amountLabel.text = String(selectedAmount).asCurrency()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        selectedAmount = 0
+        amountLabel.text = String(selectedAmount).asCurrency()
         defaultButtons = [button11, button12, button13, button14,
                           button21, button22, button23, button24]
         for (index, button) in defaultButtons.enumerated() {
             button.amount = buttonValues[index]
-            button.setTitle(String(button.amount).addCurrency(), for: .normal)
+            button.setTitle(String(button.amount).asCurrency(), for: .normal)
         }
         cancelButton.setTitle(__("as_cancel_button_title"), for: .normal)
         

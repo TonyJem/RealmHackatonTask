@@ -12,7 +12,7 @@ class BalanceViewController: UIViewController {
             balanceButton.setTitle("", for: .normal)
             return
         }
-        balanceButton.setTitle(String(currentBalance).addCurrency(), for: .normal)
+        balanceButton.setTitle(String(currentBalance).asCurrency(), for: .normal)
     }
     
     @IBAction func balanceButtonDidTap(_ sender: UIButton) {

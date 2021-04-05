@@ -51,11 +51,11 @@ class CashWithdrawal: Transaction {
     }
     
     override func errorMessage() -> String {
-        return "Can't withdraw \(selectedAmount) amount.\nThere are only \(String(Core.accountModel.balance).addCurrency()) are available on balance now!"
+        return "Can't withdraw \(selectedAmount) amount.\nThere are only \(String(Core.accountModel.balance).asCurrency()) are available on balance now!"
     }
     
     override func successMessage() -> String {
-        return "All Ok! Your recently withdrawed amount is: \(String(selectedAmount).addCurrency())"
+        return "All Ok! Your recently withdrawed amount is: \(String(selectedAmount).asCurrency())"
     }
 }
 
@@ -81,7 +81,7 @@ class TopUpDeposit: Transaction {
     }
     
     override func successMessage() -> String {
-        return "All Ok! Your recently toped up your deposit with \(String(selectedAmount).addCurrency()). Balance now is \(Core.accountModel.balance). "
+        return "All Ok! Your recently toped up your deposit with \(String(selectedAmount).asCurrency()). Balance now is \(Core.accountModel.balance). "
     }
 }
 
@@ -99,10 +99,10 @@ class TopUpPhone: Transaction {
     }
     
     override func errorMessage() -> String {
-        return "Can't topup phone with \(selectedAmount) amount.\nThere are only \(String(Core.accountModel.balance).addCurrency()) are available on balance now!"
+        return "Can't topup phone with \(selectedAmount) amount.\nThere are only \(String(Core.accountModel.balance).asCurrency()) are available on balance now!"
     }
     
     override func successMessage() -> String {
-        return "All Ok! Your recently topedup phone account with: \(String(selectedAmount).addCurrency()) amount."
+        return "All Ok! Your recently topedup phone account with: \(String(selectedAmount).asCurrency()) amount."
     }
 }

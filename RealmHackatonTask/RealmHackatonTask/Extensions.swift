@@ -1,7 +1,7 @@
 import UIKit
 
 extension String {
-    func addCurrency() -> String {
+    func asCurrency() -> String {
         "\(__("currencySign")) \(self)"
     }
 }
