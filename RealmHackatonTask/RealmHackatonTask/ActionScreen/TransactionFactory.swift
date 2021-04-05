@@ -11,6 +11,7 @@ struct Action {
 }
 
 class Transaction {
+    let maxLimitForAmount = 9999999
     let action: Action
     let actionButtonTitle: String
     
@@ -50,7 +51,7 @@ class CashWithdrawal: Transaction {
     }
     
     override func errorMessage() -> String {
-        return "Can't withdraw \(selectedAmount) amount .\nThere are only \(String(Core.accountModel.balance).addCurrency()) on balance now!"
+        return "Can't withdraw \(selectedAmount) amount.\nThere are only \(String(Core.accountModel.balance).addCurrency()) on balance now!"
     }
     
     override func successMessage() -> String {
@@ -58,10 +59,29 @@ class CashWithdrawal: Transaction {
     }
 }
 
-//TODO: Finish this class same as CashWithdrawal class
 class TopUpDeposit: Transaction {
     override func onActionButtonTap(selectedAmount: Int) {
-        Core.accountModel.topUpDeposit(with: selectedAmount)
+        super.onActionButtonTap(selectedAmount: selectedAmount)
+        
+        if !hasError() {
+            Core.accountModel.topUpDeposit(with: selectedAmount)
+        }
+    }
+    
+    override func transactionAlertTitle() -> String {
+        return "Selected transaction is:\nTopup Deposit"
+    }
+    
+    override func hasError() -> Bool {
+        return (selectedAmount + Core.accountModel.balance) > maxLimitForAmount
+    }
+    
+    override func errorMessage() -> String {
+        return "With \(selectedAmount) amount your balance will exceed the allowed maximum: \(maxLimitForAmount). Maximal topup amount can be: \(maxLimitForAmount - Core.accountModel.balance) only."
+    }
+    
+    override func successMessage() -> String {
+        return "All Ok! Your recently toped up your deposit with \(String(selectedAmount).addCurrency()). Balance now is \(Core.accountModel.balance). "
     }
 }
 
