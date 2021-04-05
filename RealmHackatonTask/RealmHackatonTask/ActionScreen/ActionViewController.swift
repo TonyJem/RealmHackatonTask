@@ -65,6 +65,8 @@ class ActionViewController: UIViewController {
     }
     
     @IBAction func defaultAmountButtonDidTap(_ sender: DefaultAmountButton) {
+        defaultButtons.forEach { $0.backgroundColor = .clear }
+        sender.backgroundColor = .purple
         updateLabelValue(with: sender.amount)
     }
     
