@@ -5,7 +5,9 @@ class TopUpDeposit: Operation {
         super.onActionButtonTap(selectedAmount: selectedAmount)
         
         if !hasError() {
-            Core.transactionModel.topUpDeposit(with: selectedAmount)
+            let transaction = Transaction(amount: selectedAmount,
+                                          date: Date(), operation: .topUpDeposit)
+            Core.transactionModel.topUpDeposit(via: transaction)
         }
     }
     

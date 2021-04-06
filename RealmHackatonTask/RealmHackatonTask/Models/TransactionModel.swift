@@ -41,15 +41,16 @@ class TransactionModel {
     
     var transactions:[Transaction] = []
     
-    func runWithdrawal(with transaction: Transaction) {
+    func runWithdrawal(via transaction: Transaction) {
         balance -= transaction.amount
         print("🟢 Withdraw amount: \(transaction.amount).\nCurrent balance is: \(balance).")
         addTransaction(transaction: transaction)
     }
     
-    func topUpDeposit(with amount: Int) {
-        balance += amount
-        print("🟢 Top Up Account with amount: \(amount).\nCurrent balance is: \(balance).")
+    func topUpDeposit(via transaction: Transaction) {
+        balance += transaction.amount
+        print("🟢 Top Up Account with amount: \(transaction.amount).\nCurrent balance is: \(balance).")
+        addTransaction(transaction: transaction)
     }
     
     func topUpPhone(with amount: Int) {

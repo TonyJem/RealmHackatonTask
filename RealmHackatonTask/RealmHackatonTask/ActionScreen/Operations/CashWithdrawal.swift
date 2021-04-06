@@ -8,7 +8,7 @@ class CashWithdrawal: Operation {
         if !hasError() {
             let transaction = Transaction(amount: selectedAmount,
                                           date: Date(), operation: .cashWithdrawal)
-            Core.transactionModel.runWithdrawal(with: transaction)
+            Core.transactionModel.runWithdrawal(via: transaction)
         }
     }
     
