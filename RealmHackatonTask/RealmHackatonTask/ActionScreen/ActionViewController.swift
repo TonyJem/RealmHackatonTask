@@ -19,7 +19,7 @@ class ActionViewController: UIViewController {
     private let buttonValues = [5, 10, 15, 20, 50, 100, 200, 500]
     private let model = Core.accountModel
     
-    private var selectedTransaction: Transaction?
+    private var selectedTransaction: Operation?
     private var defaultButtons: [DefaultAmountButton] = []
     private var selectedAmount = 0 {
         didSet {
@@ -41,13 +41,13 @@ class ActionViewController: UIViewController {
         
         switch self.title {
         case __("as_cash_withdrawal_bar_title"):
-            selectedTransaction = CashWithdrawal(action: Action(transactionType: .cashWithdrawal),
+            selectedTransaction = CashWithdrawal(action: Action(operationType: .cashWithdrawal),
                                              actionButtonTitle: __("as_withdraw_button_title"))
         case __("as_top_up_deposit_bar_title"):
-            selectedTransaction = TopUpDeposit(action: Action(transactionType: .topUpDeposit),
+            selectedTransaction = TopUpDeposit(action: Action(operationType: .topUpDeposit),
                                              actionButtonTitle: __("as_top_up_deposit_button_title"))
         case __("as_top_up_phone_bar_title"):
-            selectedTransaction = TopUpPhone(action: Action(transactionType: .topUpPhone),
+            selectedTransaction = TopUpPhone(action: Action(operationType: .topUpPhone),
                                              actionButtonTitle: __("as_top_up_phone_button_title"))
         default:
             break
@@ -88,7 +88,7 @@ private extension ActionViewController {
     
     func showConfirmTransactionAlert() {
         guard let transaction =  selectedTransaction else { return }
-        let alert = UIAlertController(title: transaction.transactionAlertTitle(),
+        let alert = UIAlertController(title: transaction.alertTitle(),
                                       message: "Please confirm or cancel this transaction. Thank You!",
                                       preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Confirm", style: .default) { [self] _ in

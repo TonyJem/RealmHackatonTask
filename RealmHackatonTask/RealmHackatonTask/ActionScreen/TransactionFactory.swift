@@ -1,16 +1,16 @@
 import UIKit
 
-enum TransactionType {
+enum OperationType {
     case cashWithdrawal
     case topUpDeposit
     case topUpPhone
 }
 
 struct Action {
-    let transactionType: TransactionType
+    let operationType: OperationType
 }
 
-class Transaction {
+class Operation {
     let maxLimitForAmount = 9999999
     let action: Action
     let actionButtonTitle: String
@@ -26,7 +26,7 @@ class Transaction {
         self.selectedAmount = selectedAmount
     }
     
-    func transactionAlertTitle() -> String { return "" }
+    func alertTitle() -> String { return "" }
     
     func hasError() -> Bool {
         return selectedAmount > Core.accountModel.balance
@@ -36,7 +36,7 @@ class Transaction {
     func successMessage() -> String { return "" }
 }
 
-class CashWithdrawal: Transaction {
+class CashWithdrawal: Operation {
     
     override func onActionButtonTap(selectedAmount: Int) {
         super.onActionButtonTap(selectedAmount: selectedAmount)
@@ -46,7 +46,7 @@ class CashWithdrawal: Transaction {
         }
     }
     
-    override func transactionAlertTitle() -> String {
+    override func alertTitle() -> String {
         return "Selected transaction is:\nCash Withdrawal"
     }
     
@@ -59,7 +59,7 @@ class CashWithdrawal: Transaction {
     }
 }
 
-class TopUpDeposit: Transaction {
+class TopUpDeposit: Operation {
     override func onActionButtonTap(selectedAmount: Int) {
         super.onActionButtonTap(selectedAmount: selectedAmount)
         
@@ -68,7 +68,7 @@ class TopUpDeposit: Transaction {
         }
     }
     
-    override func transactionAlertTitle() -> String {
+    override func alertTitle() -> String {
         return "Selected transaction is:\nTopup Deposit"
     }
     
@@ -85,7 +85,7 @@ class TopUpDeposit: Transaction {
     }
 }
 
-class TopUpPhone: Transaction {
+class TopUpPhone: Operation {
     override func onActionButtonTap(selectedAmount: Int) {
         super.onActionButtonTap(selectedAmount: selectedAmount)
         
@@ -94,7 +94,7 @@ class TopUpPhone: Transaction {
         }
     }
     
-    override func transactionAlertTitle() -> String {
+    override func alertTitle() -> String {
         return "Selected transaction is:\nTopup Phone Account"
     }
     

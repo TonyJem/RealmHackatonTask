@@ -2,5 +2,5 @@ import Foundation
 
 struct Core {
     static let accountModel = AccountModel()
-    static let operationModel = OperationModel()
+    static let operationModel = TransactionModel()
 }

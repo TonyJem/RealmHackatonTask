@@ -9,7 +9,7 @@ class TransactionCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func fill(model: Operation) {
+    func fill(model: Transaction) {
         dateLabel.text = model.date
         operationLabel.text = model.operation
         amountLabel.text = String(model.amount)
