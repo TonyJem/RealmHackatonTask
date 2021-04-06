@@ -10,7 +10,10 @@ class TransactionCell: UITableViewCell {
     }
     
     func fill(model: Transaction) {
-        dateLabel.text = model.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy.MM.dd HH:mm:ss"
+        dateLabel.text = dateFormatter.string(from: model.date)
+        
         operationLabel.text = model.description
         amountLabel.text = String(model.amount)
     }

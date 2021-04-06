@@ -11,7 +11,7 @@ enum transactionType {
 
 struct Transaction {
     let amount: Int
-    let date: String
+    let date: Date
     let operation: OperationType
     
     var description: String {
