@@ -8,4 +8,10 @@ class TransactionCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    func fill(model: Operation) {
+        dateLabel.text = model.date
+        operationLabel.text = model.operation
+        amountLabel.text = String(model.amount)
+    }
 }
