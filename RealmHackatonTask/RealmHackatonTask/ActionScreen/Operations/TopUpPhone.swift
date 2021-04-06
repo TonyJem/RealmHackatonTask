@@ -5,7 +5,9 @@ class TopUpPhone: Operation {
         super.onActionButtonTap(selectedAmount: selectedAmount)
         
         if !hasError() {
-            Core.transactionModel.topUpPhone(with: selectedAmount)
+            let transaction = Transaction(amount: selectedAmount,
+                                          date: Date(), operation: .topUpPhone)
+            Core.transactionModel.topUpPhone(via: transaction)
         }
     }
     

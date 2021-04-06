@@ -53,9 +53,10 @@ class TransactionModel {
         addTransaction(transaction: transaction)
     }
     
-    func topUpPhone(with amount: Int) {
-        balance -= amount
-        print("🟢 Top Up Phone with amount: \(amount).\nCurrent balance is: \(balance).")
+    func topUpPhone(via transaction: Transaction) {
+        balance -= transaction.amount
+        print("🟢 Top Up Phone with amount: \(transaction.amount).\nCurrent balance is: \(balance).")
+        addTransaction(transaction: transaction)
     }
 }
 
