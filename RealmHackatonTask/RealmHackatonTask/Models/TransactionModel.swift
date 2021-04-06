@@ -1,5 +1,9 @@
 import UIKit
 
+struct Core {
+    static let transactionModel = TransactionModel()
+}
+
 struct Transaction {
     let date: String
     let operation: String
@@ -8,7 +12,6 @@ struct Transaction {
 }
 
 class TransactionModel {
-    
     //TODO: Currently is set as Constant, need to Replace with value comming from DB:
     var balance = 10
     
@@ -31,7 +34,4 @@ class TransactionModel {
         balance -= amount
         print("🟢 Top Up Phone with amount: \(amount).\nCurrent balance is: \(balance).")
     }
-    
-    
-    
 }
