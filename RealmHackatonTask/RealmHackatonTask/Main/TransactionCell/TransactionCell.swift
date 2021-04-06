@@ -16,5 +16,14 @@ class TransactionCell: UITableViewCell {
         
         operationLabel.text = model.description
         amountLabel.text = String(model.amount)
+        
+        switch model.transactionType {
+        case .income:
+            amountLabel.textColor = .green
+            amountLabel.text = "+ \(model.amount)"
+        case .outcome:
+            amountLabel.textColor = .red
+            amountLabel.text = "- \(model.amount)"
+        }
     }
 }
