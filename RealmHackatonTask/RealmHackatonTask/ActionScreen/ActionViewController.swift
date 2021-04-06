@@ -17,7 +17,7 @@ class ActionViewController: UIViewController {
     
     private let subtractAndAddButtonStep = 1
     private let buttonValues = [5, 10, 15, 20, 50, 100, 200, 500]
-    private let model = Core.accountModel
+    private let model = Core.transactionModel
     
     private var selectedOperation: Operation?
     private var defaultButtons: [DefaultAmountButton] = []

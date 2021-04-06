@@ -29,7 +29,7 @@ class Operation {
     func alertTitle() -> String { return "" }
     
     func hasError() -> Bool {
-        return selectedAmount > Core.accountModel.balance
+        return selectedAmount > Core.transactionModel.balance
     }
     
     func errorMessage() -> String { return "" }

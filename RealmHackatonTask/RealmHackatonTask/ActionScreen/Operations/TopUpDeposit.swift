@@ -5,7 +5,7 @@ class TopUpDeposit: Operation {
         super.onActionButtonTap(selectedAmount: selectedAmount)
         
         if !hasError() {
-            Core.accountModel.topUpDeposit(with: selectedAmount)
+            Core.transactionModel.topUpDeposit(with: selectedAmount)
         }
     }
     
@@ -14,14 +14,14 @@ class TopUpDeposit: Operation {
     }
     
     override func hasError() -> Bool {
-        return (selectedAmount + Core.accountModel.balance) > maxLimitForAmount
+        return (selectedAmount + Core.transactionModel.balance) > maxLimitForAmount
     }
     
     override func errorMessage() -> String {
-        return "With \(selectedAmount) amount your balance will exceed the allowed maximum: \(maxLimitForAmount). Maximal topup amount can be: \(maxLimitForAmount - Core.accountModel.balance) only."
+        return "With \(selectedAmount) amount your balance will exceed the allowed maximum: \(maxLimitForAmount). Maximal topup amount can be: \(maxLimitForAmount - Core.transactionModel.balance) only."
     }
     
     override func successMessage() -> String {
-        return "All Ok! Your recently toped up your deposit with \(String(selectedAmount).asCurrency()). Balance now is \(Core.accountModel.balance). "
+        return "All Ok! Your recently toped up your deposit with \(String(selectedAmount).asCurrency()). Balance now is \(Core.transactionModel.balance). "
     }
 }

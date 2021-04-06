@@ -6,7 +6,7 @@ class CashWithdrawal: Operation {
         super.onActionButtonTap(selectedAmount: selectedAmount)
         
         if !hasError() {
-            Core.accountModel.withdraw(selectedAmount)
+            Core.transactionModel.withdraw(selectedAmount)
         }
     }
     
@@ -15,7 +15,7 @@ class CashWithdrawal: Operation {
     }
     
     override func errorMessage() -> String {
-        return "Can't withdraw \(selectedAmount) amount.\nThere are only \(String(Core.accountModel.balance).asCurrency()) are available on balance now!"
+        return "Can't withdraw \(selectedAmount) amount.\nThere are only \(String(Core.transactionModel.balance).asCurrency()) are available on balance now!"
     }
     
     override func successMessage() -> String {

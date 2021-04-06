@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showBalance" {
             if let destinationVC = segue.destination as? BalanceViewController {
-                destinationVC.balanceToDisplay = Core.accountModel.balance
+                destinationVC.balanceToDisplay = Core.transactionModel.balance
             }
         }
     }
