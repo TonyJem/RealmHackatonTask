@@ -4,7 +4,7 @@ class TransactionsListViewContoller: UIViewController {
     
     @IBOutlet private weak var transactionsTableView: UITableView!
     
-    private let model = OperationModel()
+    private let model = Core.operationModel
     
     override func viewDidLoad() {
         super.viewDidLoad()
