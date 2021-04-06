@@ -15,6 +15,8 @@ class TransactionModel {
                                     Transaction(date: "2020-10", operation: "Wthdrawal3", type: "minus", amount: 100)]
     
     func addTransaction() {
+        
+        
     }
     
     func sortTransactions() {

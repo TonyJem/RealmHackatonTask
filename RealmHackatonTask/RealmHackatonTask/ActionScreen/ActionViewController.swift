@@ -19,7 +19,7 @@ class ActionViewController: UIViewController {
     private let buttonValues = [5, 10, 15, 20, 50, 100, 200, 500]
     private let model = Core.accountModel
     
-    private var selectedTransaction: Operation?
+    private var selectedOperation: Operation?
     private var defaultButtons: [DefaultAmountButton] = []
     private var selectedAmount = 0 {
         didSet {
@@ -41,19 +41,19 @@ class ActionViewController: UIViewController {
         
         switch self.title {
         case __("as_cash_withdrawal_bar_title"):
-            selectedTransaction = CashWithdrawal(action: Action(operationType: .cashWithdrawal),
+            selectedOperation = CashWithdrawal(action: Action(operationType: .cashWithdrawal),
                                              actionButtonTitle: __("as_withdraw_button_title"))
         case __("as_top_up_deposit_bar_title"):
-            selectedTransaction = TopUpDeposit(action: Action(operationType: .topUpDeposit),
+            selectedOperation = TopUpDeposit(action: Action(operationType: .topUpDeposit),
                                              actionButtonTitle: __("as_top_up_deposit_button_title"))
         case __("as_top_up_phone_bar_title"):
-            selectedTransaction = TopUpPhone(action: Action(operationType: .topUpPhone),
+            selectedOperation = TopUpPhone(action: Action(operationType: .topUpPhone),
                                              actionButtonTitle: __("as_top_up_phone_button_title"))
         default:
             break
         }
         
-        actionButton.setTitle(selectedTransaction?.actionButtonTitle, for: .normal)
+        actionButton.setTitle(selectedOperation?.actionButtonTitle, for: .normal)
     }
     
     @IBAction func subtractButtonDidTap(_ sender: UIButton) {
@@ -87,16 +87,16 @@ private extension ActionViewController {
     }
     
     func showConfirmTransactionAlert() {
-        guard let transaction =  selectedTransaction else { return }
-        let alert = UIAlertController(title: transaction.alertTitle(),
+        guard let operation =  selectedOperation else { return }
+        let alert = UIAlertController(title: operation.alertTitle(),
                                       message: "Please confirm or cancel this transaction. Thank You!",
                                       preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Confirm", style: .default) { [self] _ in
-            transaction.onActionButtonTap(selectedAmount: selectedAmount)
-            if transaction.hasError() {
-                showErrorAlert(with: transaction.errorMessage())
+            operation.onActionButtonTap(selectedAmount: selectedAmount)
+            if operation.hasError() {
+                showErrorAlert(with: operation.errorMessage())
             } else {
-                showSuccessAlert(with: transaction.successMessage())
+                showSuccessAlert(with: operation.successMessage())
             }
         }
         let cancelAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
