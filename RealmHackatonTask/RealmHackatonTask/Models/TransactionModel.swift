@@ -63,5 +63,13 @@ class TransactionModel {
 private extension TransactionModel {
     func addTransaction(transaction: Transaction) {
         transactions.append(transaction)
+        sortTransactions()
+    }
+    
+    func sortTransactions() {
+        var sortedTransactions = transactions.filter{ $0.transactionType == .outcome }
+        let incomeTransactions = transactions.filter{ $0.transactionType == .income }
+        incomeTransactions.forEach{ sortedTransactions.append($0) }
+        transactions = sortedTransactions
     }
 }
