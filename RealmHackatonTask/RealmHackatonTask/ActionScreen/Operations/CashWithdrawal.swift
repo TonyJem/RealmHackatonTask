@@ -6,7 +6,9 @@ class CashWithdrawal: Operation {
         super.onActionButtonTap(selectedAmount: selectedAmount)
         
         if !hasError() {
-            Core.transactionModel.withdraw(selectedAmount)
+            let transaction = Transaction(date: "Date", operation: "Operation",
+                                          type: "Type", amount: selectedAmount)
+            Core.transactionModel.runWithdrawal(with: transaction)
         }
     }
     
