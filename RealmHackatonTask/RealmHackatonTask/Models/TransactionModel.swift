@@ -4,11 +4,35 @@ struct Core {
     static let transactionModel = TransactionModel()
 }
 
+enum transactionType {
+    case outcome
+    case income
+}
+
 struct Transaction {
-    let date: String
-    let operation: String
-    let type: String
     let amount: Int
+    let date: String
+    let operation: OperationType
+    
+    var description: String {
+        switch operation {
+        case .cashWithdrawal:
+            return "Cash withdrawal"
+        case .topUpDeposit:
+            return "Topup deposit"
+        case .topUpPhone:
+            return "Topup Phone's account"
+        }
+    }
+    
+    var transactionType: transactionType {
+        switch operation {
+        case .cashWithdrawal, .topUpPhone:
+            return .outcome
+        case .topUpDeposit:
+            return .income
+        }
+    }
 }
 
 class TransactionModel {

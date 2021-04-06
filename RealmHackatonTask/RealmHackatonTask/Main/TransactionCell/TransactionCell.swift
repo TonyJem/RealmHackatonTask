@@ -11,7 +11,7 @@ class TransactionCell: UITableViewCell {
     
     func fill(model: Transaction) {
         dateLabel.text = model.date
-        operationLabel.text = model.operation
+        operationLabel.text = model.description
         amountLabel.text = String(model.amount)
     }
 }
