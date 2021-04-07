@@ -21,7 +21,7 @@ class ActionViewController: UIViewController {
     
     private var selectedOperation: Operation?
     private var defaultButtons: [DefaultAmountButton] = []
-    private var selectedAmount = 0 {
+    private var selectedAmount = 9999999 {
         didSet {
             amountLabel.text = String(selectedAmount).asCurrency()
         }
@@ -57,14 +57,17 @@ class ActionViewController: UIViewController {
     }
     
     @IBAction func subtractButtonDidTap(_ sender: UIButton) {
+        guard selectedAmount > 0 else { return }
         updateLabelValue(with: -subtractAndAddButtonStep)
     }
     
     @IBAction func addButtonDidTap(_ sender: UIButton) {
+        guard selectedAmount < Core.maxLimitForAmount else { return }
         updateLabelValue(with: subtractAndAddButtonStep)
     }
     
     @IBAction func defaultAmountButtonDidTap(_ sender: DefaultAmountButton) {
+        guard selectedAmount < Core.maxLimitForAmount else { return }
         defaultButtons.forEach { $0.backgroundColor = .clear }
         sender.backgroundColor = .purple
         updateLabelValue(with: sender.amount)

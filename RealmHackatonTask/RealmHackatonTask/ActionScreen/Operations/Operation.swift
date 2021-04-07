@@ -11,7 +11,7 @@ struct Action {
 }
 
 class Operation {
-    let maxLimitForAmount = 9999999
+    let maxLimitForAmount = Core.maxLimitForAmount
     let action: Action
     let actionButtonTitle: String
     

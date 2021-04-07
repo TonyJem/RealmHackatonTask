@@ -2,6 +2,7 @@ import UIKit
 
 struct Core {
     static let transactionModel = TransactionModel()
+    static let maxLimitForAmount = 9999999
 }
 
 enum transactionType {
