@@ -4,7 +4,7 @@ class ActionViewController: UIViewController {
     @IBOutlet private weak var subtractButton: UIButton!
     @IBOutlet private weak var amountLabel: UILabel!
     @IBOutlet private weak var addButton: UIButton!
-    @IBOutlet private weak var actionButton: UIButton!
+    @IBOutlet private weak var amountSlider: UISlider!
     @IBOutlet private weak var button11: DefaultAmountButton!
     @IBOutlet private weak var button12: DefaultAmountButton!
     @IBOutlet private weak var button13: DefaultAmountButton!
@@ -14,6 +14,7 @@ class ActionViewController: UIViewController {
     @IBOutlet private weak var button23: DefaultAmountButton!
     @IBOutlet private weak var button24: DefaultAmountButton!
     @IBOutlet private weak var cancelButton: UIButton!
+    @IBOutlet private weak var actionButton: UIButton!
     
     private let subtractAndAddButtonStep = 1
     private let buttonValues = [5, 10, 15, 20, 50, 100, 200, 500]

@@ -353,6 +353,7 @@
                         <outlet property="actionButton" destination="GBm-qw-OqA" id="153-gd-8KP"/>
                         <outlet property="addButton" destination="o8J-uk-Tyk" id="Val-yz-7Bh"/>
                         <outlet property="amountLabel" destination="2g3-Zm-dWj" id="l7a-DX-vPy"/>
+                        <outlet property="amountSlider" destination="cvB-1D-CrF" id="BpK-xP-Bfw"/>
                         <outlet property="button11" destination="I0S-QD-JAs" id="dLO-Nx-Y9W"/>
                         <outlet property="button12" destination="BMT-E4-d4n" id="xd1-2s-Qhs"/>
                         <outlet property="button13" destination="86g-tU-LpU" id="qRf-y1-5Tj"/>
